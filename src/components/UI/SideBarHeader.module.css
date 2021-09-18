@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    padding:40px 20px;
+    background: white;
+    color: #a4a0a0;
+    user-select: none;
+}
+.userName h5,.userName h4 {
+    margin: 0 0 0 20px;
+    font-size: smaller;
+
+}
+.userName h4 {
+    color: #7c7979;
+
+}
+
+.userIcon i {
+    width: 100%;
+    color: #7c7979;
+}
+
+.time {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+
+
