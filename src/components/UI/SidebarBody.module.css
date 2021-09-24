@@ -14,7 +14,7 @@
     line-height: 4;
     padding-left: 20px;
     border-bottom: 2px solid rgba(115, 112, 112, 0.5);
-    transition: 0.4s;
+    transition: 0.5s;
     font-weight: bold;
     color: #343333;
 
@@ -26,6 +26,7 @@
 }
 .sidebarBody  ul a:hover {
     padding-left: 30px;
+    background: #BDF1F6;
 
 }
 .footer {

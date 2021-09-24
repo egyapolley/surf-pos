@@ -1,19 +1,30 @@
 import React from 'react';
-import clasess from './SidebarBody.module.css'
+import classes from './SidebarBody.module.css'
+import {NavLink} from "react-router-dom";
+
 
 function SideBarBody(props) {
 
+    const activeStyle =  {
+        // background:"#48bb40"
+        background:"#156be3",
+        color:"#fff"
+
+    }
+
+
+
 
     return (
-        <div className={clasess.sidebarBody}>
+        <div className={classes.sidebarBody}>
             <ul>
-                <li><a href=""><i className="fas fa-tachometer-alt"/>Dashboard</a></li>
-                <li><a href=""><i className="fas fa-exchange-alt"/>Transactions</a></li>
-                <li><a href=""><i className="fas fa-file-medical-alt"/>Reports</a></li>
-                <li><a href=""><i className="fas fa-cart-arrow-down"/>Inventory</a></li>
-                <li><a href=""><i className="fas fa-toolbox"/>Settings</a></li>
+                <li><NavLink to="/dashboard" activeStyle={activeStyle}><i className="fas fa-tachometer-alt"/>Dashboard</NavLink></li>
+                <li><NavLink to="/transactions" activeStyle={activeStyle}><i className="fas fa-exchange-alt"/>Transactions</NavLink></li>
+                <li><NavLink to="/reports" activeStyle={activeStyle}><i className="fas fa-file-medical-alt"/>Reports</NavLink></li>
+                <li><NavLink to="/inventory" activeStyle={activeStyle}><i className="fas fa-cart-arrow-down"/>Inventory</NavLink></li>
+                <li><NavLink to="/settings" activeStyle={activeStyle}><i className="fas fa-toolbox"/>Settings</NavLink></li>
             </ul>
-            <div className={clasess.footer}>
+            <div className={classes.footer}>
                 <a href=""><i className="fas fa-sign-out-alt"/>Sign Out</a>
             </div>
         </div>
