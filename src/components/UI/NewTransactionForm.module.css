@@ -1,0 +1,92 @@
+.container {
+    padding: 20px 0;
+    font-size: 0.9rem;
+
+}
+
+.container h3 {
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+.body form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body form >div {
+    flex: 1;
+}
+
+.row {
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row * {
+    width: 75%;
+}
+
+.row label {
+    font-weight: bold;
+}
+
+.row input, .row select {
+    padding: 8px 20px;
+    outline: none;
+    border:none;
+    background: #eee;
+}
+.row label {
+    margin-bottom: 2px;
+}
+
+.radio {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.actionBtnContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.actionBtnContainer button {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    font-family: inherit;
+    border-radius: 5px;
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.actionBtnContainer button:hover {
+    background: #ccc;
+    color: #343333;
+    box-shadow: 0 0 12px #ccc;
+}
+
+.actionBtnContainer button:first-child {
+    background: deeppink;
+}
+
+.actionBtnContainer button:last-child {
+    background: green;
+}
+
+.actionBtnContainer button:hover {
+    background: #ccc;
+    color: #343333;
+
+}
+
+
+

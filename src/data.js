@@ -195,21 +195,31 @@ const DUMMY_DATA = [
 ]
 
 const DEVICE_TYPES=[
-    {value:"surflineHuaweiMifi",label:"Surfline Huawei Mi-Fi"},
-    {value:"surflineHuaweiRouter",label:"Surfline Huawei Router"},
-    {value:"surflineOdu",label:"Surfline ODU"},
+    {value:"surflineHuaweiMifi",label:"Surfline Huawei Mi-Fi",price:250},
+    {value:"surflineHuaweiRouter",label:"Surfline Huawei Router",price:350},
+    {value:"surflineOdu",label:"Surfline ODU",price:600},
 ]
 
-const SEARCH_OPTIONS=[
-    {value:"policyId",label:"Policy ID"},
-    {value:"deviceImei",label:"Device IMEI"},
-    {value:"surflineNumber",label:"Surfline Number"},
-    {value:"contact",label:"Phone Contact"},
-
+const VOUCHER_TYPES=[
+    {value:"CASH100",label:"100",price:100},
+    {value:"CASH200",label:"200",price:200},
+    {value:"CASH300",label:"300",price:300},
 ]
+
+const TRANSACTION_TYPES=[
+    {value:"device",label:"Device"},
+    {value:"data",label:"Data"},
+    {value:"cash",label:"Cash"},
+    {value:"voucher",label:"Voucher"},
+]
+
+
+
 
 
 
 export const getTransactions = () => DUMMY_DATA
 export const getDeviceTypes =()=> DEVICE_TYPES
-export const getSearchOptions =()=> SEARCH_OPTIONS
+export const getVoucherTypes =() =>VOUCHER_TYPES
+export const getTransactionTypes = () => TRANSACTION_TYPES
+

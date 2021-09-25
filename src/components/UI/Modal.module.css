@@ -1,0 +1,23 @@
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height:100vh;
+    background: rgba(204, 204, 204, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 100;
+    padding-left: 250px;
+    padding-top: 5vh;
+
+}
+
+.modal {
+    width: 70%;
+    background: #20334d;
+    color: #fefefe;
+    border-radius: 10px;
+
+}
