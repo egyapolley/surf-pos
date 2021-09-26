@@ -1,0 +1,70 @@
+.container {
+    width: 50%;
+    margin: 20px auto;
+    background: #20334d;
+    color: #fefefe;
+    padding: 10px 30px;
+
+}
+
+.container h3 {
+    text-align: center;
+}
+
+
+
+.formBody {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+}
+
+
+.formControl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px ;
+    font-size: 0.9rem;
+}
+.formControl label {
+    font-weight: bold;
+}
+
+.formControl input[disabled]{
+    background: #BDF1F6;
+    color: #413333;
+}
+
+.formControl input, .formControl select {
+    width: 100%;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+}
+.actionBtnContainer{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actionBtnContainer button {
+    display: inline-block;
+    padding: 5px 30px;
+    color: #fff;
+    font-family: inherit;
+    border-radius: 5px;
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: larger;
+    background: green;
+}
+
+.actionBtnContainer button:hover {
+    background: #ccc;
+    color: #343333;
+}
+
+

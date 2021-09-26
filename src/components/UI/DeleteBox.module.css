@@ -1,0 +1,70 @@
+.messageBoxContainer{
+    width: 70%;
+    margin: 0 auto 30px;
+
+
+}
+
+.messageBoxContainer h3 {
+    width: 100%;
+    border-bottom: 2px solid #ffffff;
+    text-align: center;
+    line-height: 3;
+    margin-bottom: 30px;
+    color: orangered;
+}
+
+
+.messageBox {
+    text-align: center;
+}
+
+
+
+.messageboxUserId{
+    color: orangered;
+    font-size: larger;
+    font-weight: bolder;
+    font-style: italic;
+    white-space: nowrap;
+
+}
+
+.buttonGroup{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.buttonGroup button {
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    margin: 10px 25px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-family: 'PT Serif', serif;
+    color: white;
+    transition: 0.4s;
+}
+
+.buttonGroup button:first-child {
+    background: deeppink;
+
+}
+.buttonGroup button:last-child {
+    background: green;
+
+}
+
+.buttonGroup button:hover {
+    background: white;
+    color: #222020;
+    box-shadow: 0 0 10px #ccc;
+}
+
+
+

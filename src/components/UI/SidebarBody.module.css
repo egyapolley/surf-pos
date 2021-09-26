@@ -31,9 +31,31 @@
 }
 .footer {
     padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
 
 }
-.footer a {
+.footer button {
     color: #7c7979;
     font-weight: bold;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    padding: 5px 10px;
+    transition: 0.4s;
+}
+.footer button:first-child {
+    color: #EE7070
+}
+
+.footer button:last-child{
+    color: #474242;
+}
+.footer button:hover{
+    color: #0c2131;
+    text-decoration: underline;
+
 }

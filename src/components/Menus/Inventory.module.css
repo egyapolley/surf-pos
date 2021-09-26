@@ -1,0 +1,71 @@
+.inventory {
+    margin-top: 50px;
+
+}
+
+.inventory header {
+    padding: 0 40px 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+.container{
+    margin-top: 5px;
+    padding: 20px;
+}
+.container > div {
+    flex-grow: 1;
+
+}
+
+.containerHeader{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+
+.containerHeader input {
+    display: inline-block;
+    padding: 3px 25px;
+    width: 20%;
+    border: 2px solid #4f4d4d;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+
+}
+
+.containerHeader input:focus {
+    background: #eee;
+}
+
+.tableWrapper:first-of-type {
+    background: rgba(143, 186, 243, 0.5);
+
+    padding: 20px 0;
+
+
+}
+
+.tableWrapper:last-of-type {
+    background: rgba(143, 186, 243, 0.5);
+    padding: 20px 0;
+    margin-top: 35px;
+
+
+}
+
+.tableWrapper h4 {
+    text-align: center;
+    color: #222020;
+    text-shadow: 0 0 1px;
+    letter-spacing: 3px;
+
+
+}

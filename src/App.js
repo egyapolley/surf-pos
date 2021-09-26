@@ -6,10 +6,24 @@ import Transactions from "./components/Menus/Transactions";
 import Settings from "./components/Menus/Settings";
 import Reports from "./components/Menus/Reports";
 import Inventory from "./components/Menus/Inventory";
+import {useEffect, useState} from "react";
+import Login from "./components/UI/Login";
 
 function App() {
-  return (
-    <div className="App">
+
+    const [isLogin, setIsLogin] = useState(false)
+
+    useEffect(() => {
+        const jwt = localStorage.getItem("token");
+        if (jwt) {
+            setIsLogin(true)
+
+        }
+
+    }, [])
+    if (!isLogin) return <Login/>
+    else return (
+        <div className="App">
         <SideBar/>
         <div className="content">
             <Switch>

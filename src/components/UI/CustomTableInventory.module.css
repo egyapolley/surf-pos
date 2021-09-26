@@ -1,0 +1,73 @@
+.content {
+    margin-top: 20px;
+}
+
+.content table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.content th, .content td {
+    padding: 4px 20px;
+    text-align: left;
+}
+
+.content th:nth-child(4), .content td:nth-child(4){
+    text-align: center;
+}
+
+.content th {
+    cursor: pointer;
+    font-size: smaller;
+}
+
+
+.content thead tr {
+    border-bottom: 2px solid #4f4d4d;
+    transition: 0.5s;
+}
+
+.content tr:last-of-type {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4f4d4d;
+
+}
+/*.content tr:nth-child(even){*/
+/*    background: #f3efef;*/
+/*}*/
+
+.content tbody tr td {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.content tbody tr:hover {
+    background: rgba(189, 241, 246, 0.5);
+}
+
+
+.content thead i {
+    color: green;
+}
+
+.link a{
+    color: #156be3;
+}
+
+.trash a {
+    color: firebrick;
+
+
+}
+.content tbody button {
+    display: inline-block;
+    padding: 2px 8px;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+
+
+
+
+
