@@ -1,9 +1,11 @@
 import React from 'react';
 import classes from './SidebarBody.module.css'
-import {NavLink} from "react-router-dom";
+import {NavLink,Link} from "react-router-dom";
 
 
 function SideBarBody(props) {
+
+    console.log(JSON.stringify(props))
 
     const activeStyle = {
         // background:"#48bb40"
@@ -12,10 +14,8 @@ function SideBarBody(props) {
 
     }
 
-    const handleLogout =() =>{
-        localStorage.clear()
-        window.location = "/"
-    }
+
+
 
 
     return (
@@ -34,7 +34,7 @@ function SideBarBody(props) {
             </ul>
             <div className={classes.footer}>
 
-                <button onClick={handleLogout}><i className="fas fa-sign-out-alt"/>Sign Out</button>
+                <Link to="/logout"><i className="fas fa-sign-out-alt"/>Sign Out</Link>
                 <button >Change Password</button>
 
 

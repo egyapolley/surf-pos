@@ -8,6 +8,7 @@ import Reports from "./components/Menus/Reports";
 import Inventory from "./components/Menus/Inventory";
 import {useEffect, useState} from "react";
 import Login from "./components/UI/Login";
+import Logout from "./components/UI/Logout";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/settings" render={(props) =><Settings  {...props} />}/>
                 <Route path="/reports" render={(props) =><Reports  {...props} />}/>
                 <Route path="/inventory" render={(props) =><Inventory  {...props} />}/>
+                <Route path="/logout" render={(props) =><Logout  {...props} />}/>
                 <Redirect to="/dashboard" from="/" />
             </Switch>
         </div>

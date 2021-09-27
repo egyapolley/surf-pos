@@ -38,7 +38,7 @@
 
 
 }
-.footer button {
+.footer * {
     color: #7c7979;
     font-weight: bold;
     border: none;
@@ -47,14 +47,14 @@
     padding: 5px 10px;
     transition: 0.4s;
 }
-.footer button:first-child {
+.footer a {
     color: #EE7070
 }
 
 .footer button:last-child{
     color: #474242;
 }
-.footer button:hover{
+.footer *:hover{
     color: #0c2131;
     text-decoration: underline;
 
