@@ -227,8 +227,10 @@ function NewTransactionForm(props) {
         const name = event.target.name
         const value = event.target.value
         func(value)
+
         try {
             await schemaALL.validateAt([name], {[name]: value})
+
             setErrors(errors => ({
                 ...errors,
                 [name]: ""
@@ -241,7 +243,7 @@ function NewTransactionForm(props) {
     useEffect(() => {
         computeTotalCost()
 
-    }, [bundle, device, amount, voucher,qty,txnType])
+    }, [bundle, device, amount, voucher,qty,txnType,msisdn])
 
     const computeTotalCost = () => {
         if (txnType === 'data' && allBundles && bundle && bndleType && msisdn) {
@@ -315,7 +317,7 @@ function NewTransactionForm(props) {
                         </div>}
                         {txnType === 'cash' && <div className={classes.row}>
                             <label htmlFor="amount">Amount (GHC)</label>
-                            <input type="text" id="amount" name="amount" value={amount}
+                            <input type="number" id="amount" name="amount" value={amount} min="1"
                                    onChange={event => handleChange(event, setAmount)}/>
                             {errors['amount'] && <span className={classes.error}>required</span>}
                         </div>}
