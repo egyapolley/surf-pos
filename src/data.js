@@ -7,8 +7,10 @@ const DUMMY_DATA = [
         customerId:"233255983123",
         transactionType:"1.6GB Bundle",
         transactionDate:"09/09/2021",
+        qty:1,
+        agentId:"test1",
         status:"Successful",
-        cost:50
+        cost:10
     },
     {
         id:2,
@@ -17,8 +19,10 @@ const DUMMY_DATA = [
         customerId:"233255120102",
         transactionType:"7GB Bundle",
         transactionDate:"09/09/2021",
+        qty:1,
+        agentId:"test6",
         status:"Failed",
-        cost:100
+        cost:40
     },
     {
         id:3,
@@ -26,9 +30,11 @@ const DUMMY_DATA = [
         transactionId:'000193145671',
         customerId:"233255820102",
         transactionType:"5GHC Voucher",
+        qty:2,
+        agentId:"test3",
         transactionDate:"09/09/2021",
         status:"Successful",
-        cost:5
+        cost:10
     },
     {
         id:4,
@@ -37,6 +43,8 @@ const DUMMY_DATA = [
         customerId:"233255001102",
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test6",
         status:"Successful",
         cost:250
     },
@@ -47,8 +55,10 @@ const DUMMY_DATA = [
         customerId:"233255110102",
         transactionType:"Huawei Router",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test4",
         status:"Successful",
-        cost:250
+        cost:350
     },
     {
         id:6,
@@ -57,6 +67,8 @@ const DUMMY_DATA = [
         customerId:"233255920102",
         transactionType:"Unlimited Day/Night Bundle",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test5",
         status:"Pending",
         cost:300
     },
@@ -66,9 +78,11 @@ const DUMMY_DATA = [
         transactionId:'007193145671',
         customerId:"233255020109",
         transactionType:"Huawei Mi-Fi",
+        qty:2,
+        agentId:"test1",
         transactionDate:"09/10/2021",
         status:"Successful",
-        cost:250
+        cost:500
     },
     {
         id:9,
@@ -77,6 +91,8 @@ const DUMMY_DATA = [
         customerId:"233255020102",
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test1",
         status:"Successful",
         cost:250
     },
@@ -87,6 +103,8 @@ const DUMMY_DATA = [
         customerId:"233255020102",
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test5",
         status:"Successful",
         cost:250
     },
@@ -97,6 +115,8 @@ const DUMMY_DATA = [
         customerId:"233255020102",
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test4",
         status:"Successful",
         cost:250
     },
@@ -107,6 +127,8 @@ const DUMMY_DATA = [
         customerId:"233255029102",
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test4",
         status:"Successful",
         cost:250
     },
@@ -117,8 +139,10 @@ const DUMMY_DATA = [
         customerId:"233255020132",
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
+        qty:3,
+        agentId:"test2",
         status:"Successful",
-        cost:250
+        cost:750
     },
     {
         id:14,
@@ -127,6 +151,8 @@ const DUMMY_DATA = [
         customerId:"233255024102",
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test3",
         status:"Successful",
         cost:250
     },
@@ -139,6 +165,8 @@ const DUMMY_DATA = [
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
         status:"Successful",
+        qty:1,
+        agentId:"test5",
         cost:250
     },
     {
@@ -148,6 +176,8 @@ const DUMMY_DATA = [
         customerId:"233255020102",
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test1",
         status:"Successful",
         cost:250
     },
@@ -158,6 +188,8 @@ const DUMMY_DATA = [
         customerId:"233255320102",
         transactionType:"Huawei Mi-Fi",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test1",
         status:"Successful",
         cost:250
     },
@@ -167,6 +199,8 @@ const DUMMY_DATA = [
         transactionId:'007193145671',
         customerId:"233255120106",
         transactionType:"Huawei Mi-Fi",
+        qty:1,
+        agentId:"test1",
         transactionDate:"09/10/2021",
         status:"Successful",
         cost:250
@@ -176,10 +210,12 @@ const DUMMY_DATA = [
         payment:'Cash',
         transactionId:'007193145671',
         customerId:"233255020102",
-        transactionType:"Huawei Mi-Fi",
+        transactionType:"7GB Bundle",
         transactionDate:"09/10/2021",
+        qty:1,
+        agentId:"test4",
         status:"Successful",
-        cost:250
+        cost:40
     },
     {
         id:20,
@@ -187,6 +223,8 @@ const DUMMY_DATA = [
         transactionId:'007193145671',
         customerId:"233255020102",
         transactionType:"Huawei Mi-Fi",
+        qty:1,
+        agentId:"test1",
         transactionDate:"09/10/2021",
         status:"Successful",
         cost:250
@@ -195,9 +233,9 @@ const DUMMY_DATA = [
 ]
 
 const DEVICE_TYPES=[
-    {value:"surflineHuaweiMifi",label:"Surfline Huawei Mi-Fi",price:250},
-    {value:"surflineHuaweiRouter",label:"Surfline Huawei Router",price:350},
-    {value:"surflineOdu",label:"Surfline ODU",price:600},
+    {value:"HuaweiMifi",label:"Huawei Mi-Fi",price:250},
+    {value:"HuaweiRouter",label:"Huawei Router",price:350},
+    {value:"Odu",label:"Air Fiber",price:600},
 ]
 
 const VOUCHER_TYPES=[
@@ -310,15 +348,15 @@ const USERS =[
 const ITEMS =[
     {
         id:1,
-        itemId:"00000000101",
-        itemName:'HTC Mi-Fi',
+        itemId:"00000000106",
+        itemName:'Huawei Mi-Fi',
         stockQuantity:30,
         price:250,
     },
     {
         id:2,
         itemId:"00000000102",
-        itemName:'HTC Wireless Router',
+        itemName:'Huawei Wireless Router',
         stockQuantity:9,
         price:350,
     },
@@ -334,7 +372,7 @@ const ITEMS =[
         itemId:"00000000104",
         itemName:'D-link Router',
         stockQuantity:0,
-        price:250,
+        price:300,
     },
     {
         id:5,
@@ -345,7 +383,7 @@ const ITEMS =[
     },
     {
         id:6,
-        itemId:"00000000101",
+        itemId:"00000000107",
         itemName:'100GHC_Voucher',
         stockQuantity:4,
         price:100,
@@ -355,8 +393,8 @@ const ITEMS =[
 
 const ITEMS_IN =[
     {
-        itemId:"00000000101",
-        itemName:'HTC Mi-Fi',
+        itemId:"00000000106",
+        itemName:'Huawei Mi-Fi',
         stockQuantity:30,
         dateIssued:"24/09/2021"
     },
@@ -389,7 +427,7 @@ const ITEMS_IN =[
     },
     {
 
-        itemId:"00000000101",
+        itemId:"00000000107",
         itemName:'100GHC_Voucher',
         stockQuantity:20,
         dateIssued:"24/09/2021"

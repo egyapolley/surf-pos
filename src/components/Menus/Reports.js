@@ -12,6 +12,7 @@ import moment from "moment";
 
 import fileDownload from  'js-file-download'
 import {parse} from 'json2csv'
+import CustomTableReport from "../UI/CustomTableReport";
 
 const fields = ['transactionId','customerId','transactionType','cost','payment','transactionDate', 'status'];
 const opts = { fields, excelStrings:true };
@@ -60,7 +61,9 @@ function Reports(props) {
         setUser(users[0].username)
     }, []);
 
-    const sortedData = _.orderBy(transactions, [sortColumn.path], sortColumn.orderBy)
+    const data = user && user !== 'allUsers'?transactions.filter(value => value.agentId === user):transactions
+
+    const sortedData = _.orderBy(data, [sortColumn.path], sortColumn.orderBy)
     const paginatedData=paginate(sortedData,currentPage,pageLength)
 
 
@@ -102,7 +105,7 @@ function Reports(props) {
                 <div className={classes.exportContainer}>
                     <button onClick={handleExport}>Export <i className="fas fa-file-excel"/></button>
                 </div>
-                <CustomTable data={paginatedData} onSort={setSortColumn} sortColumn={sortColumn} />
+                <CustomTableReport data={paginatedData} onSort={setSortColumn} sortColumn={sortColumn} />
                 <div className={classes.paginateContainer}>
                     {totalCount > 0 && <Pagination totalCount={totalCount} pageLength={pageLength} onClick={setCurrentPage} currentPage={currentPage}/>}
                 </div>

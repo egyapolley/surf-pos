@@ -81,7 +81,7 @@ function Inventory(props) {
 
     const sortedData = _.orderBy(items, [sortColumn.path], sortColumn.orderBy)
 
-    const sortedData2 = _.orderBy(itemsIN, [sortColumn.path], sortColumn.orderBy)
+    const sortedData2 = _.orderBy(itemsIN, [sortColumn2.path], sortColumn2.orderBy)
 
 
 

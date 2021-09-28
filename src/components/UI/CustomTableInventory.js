@@ -57,7 +57,7 @@ function CustomTableInventory({data, onSort, sortColumn, columnHeading}) {
             <table>
                 <thead>
                 <tr>
-                    {columnHeading.map(item => <th onClick={() => handleSort(item.key)}>
+                    {columnHeading.map((item,index) => item.key && <th key={index} onClick={() => handleSort(item.key)}>
                         {item.label}{displaySortImage(item.key)}
                     </th>)}
 
