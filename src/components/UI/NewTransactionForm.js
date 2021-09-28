@@ -248,7 +248,6 @@ function NewTransactionForm(props) {
     const computeTotalCost = () => {
         if (txnType === 'data' && allBundles && bundle && bndleType && msisdn) {
             const bundles = allBundles[bndleType]
-            console.log(bundle)
             const bundleObj = bundles.find(item => item.bundleId === bundle)
             const cost = bundleObj.cost.toFixed(2)
             setTotalCost(cost)
@@ -260,7 +259,7 @@ function NewTransactionForm(props) {
             const voucherObj = getVoucherTypes().find(item => item.value === voucher)
             const cost = (voucherObj.price * qty).toFixed(2)
             setTotalCost(cost)
-        } else if (txnType === 'cash' && amount && msisdn) {
+        } else if (txnType === 'cash' && amount) {
             const cost = parseFloat(amount).toFixed(2)
             setTotalCost(cost)
 
