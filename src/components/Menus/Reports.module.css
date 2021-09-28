@@ -90,3 +90,27 @@
     align-content: flex-start;
     padding-left: 30px;
 }
+
+.exportContainer{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+.exportContainer button {
+    font-family: inherit;
+    background: green;
+    padding: 5px 25px;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    transition: 0.4s;
+    font-size: 0.8rem;
+}
+
+.exportContainer button:hover{
+    background: #cccccc;
+    color: #222020;
+
+}

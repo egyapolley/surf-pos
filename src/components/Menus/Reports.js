@@ -8,6 +8,15 @@ import Pagination from "../UI/Pagination";
 import paginate from "../../utils/paginate";
 import Period from "../UI/Period";
 
+import moment from "moment";
+
+import fileDownload from  'js-file-download'
+import {parse} from 'json2csv'
+
+const fields = ['transactionId','customerId','transactionType','cost','payment','transactionDate', 'status'];
+const opts = { fields, excelStrings:true };
+
+
 
 const pageLength =15
 function Reports(props) {
@@ -55,6 +64,15 @@ function Reports(props) {
     const paginatedData=paginate(sortedData,currentPage,pageLength)
 
 
+    const handleExport = () =>{
+
+        const csv = parse(sortedData,opts)
+
+        fileDownload(csv, `Report-${moment().format("DD-MM-YYYY-HHmmss")}.csv`)
+
+    }
+
+
 
 
 
@@ -81,8 +99,9 @@ function Reports(props) {
 
             </div>
             <div className={classes.tableContainer}>
-                {/*<div className={classes.tableContainerHeader}>*/}
-                {/*</div>*/}
+                <div className={classes.exportContainer}>
+                    <button onClick={handleExport}>Export <i className="fas fa-file-excel"/></button>
+                </div>
                 <CustomTable data={paginatedData} onSort={setSortColumn} sortColumn={sortColumn} />
                 <div className={classes.paginateContainer}>
                     {totalCount > 0 && <Pagination totalCount={totalCount} pageLength={pageLength} onClick={setCurrentPage} currentPage={currentPage}/>}
