@@ -82,3 +82,20 @@
 .login-body-container .login-error{
     color: #e5278e;
 }
+
+.login-form-control:last-of-type {
+    text-align: right;
+
+
+}
+.login-form-control:last-of-type button {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #156be3;
+    transition: 0.4s;
+}
+.login-form-control:last-of-type button:hover{
+    text-decoration: underline;
+    color: #20334d;
+}

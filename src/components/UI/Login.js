@@ -34,6 +34,9 @@ class Login extends Component {
         try {
            const body = {...this.state.data}
             //const {data: jwt} = await httpService.post("/login", body);
+            const {username, password} = this.state.data
+            if (username !== "admin") throw new Error("Invalid Username entered")
+            if (password !== "admin") throw new Error("Invalid Password entered")
             localStorage.setItem("token", "test");
             window.location = "/"
 
@@ -81,6 +84,9 @@ class Login extends Component {
 
                                 <div className="login-form-control">
                                     <input type="submit" className="login-btn" value="Login"/>
+                                </div>
+                                <div className="login-form-control">
+                                    <button type="button">Forgot Password</button>
                                 </div>
                             </form>
                         </div>
