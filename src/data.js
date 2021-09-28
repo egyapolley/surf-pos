@@ -245,8 +245,8 @@ const DATA_BUNDLES2 = {
 const USERS =[
     {
         id:1,
-        fullName:'Stephen Polley',
-        username:'EGH00047',
+        fullName:'Kofi Mai',
+        username:'test6',
         status:'ACTIVE',
         email:"test@test.com",
         phoneContact:"233249113451",
@@ -255,8 +255,8 @@ const USERS =[
     },
     {
         id:2,
-        fullName:'Adjei Kwame',
-        username:'EGH00047',
+        fullName:'Andy Mark',
+        username:'test5',
         status:'ACTIVE',
         email:"test@test.com",
         phoneContact:"233249113451",
@@ -266,7 +266,7 @@ const USERS =[
     {
         id:3,
         fullName:'Yaw Attah',
-        username:'EGH00047',
+        username:'test4',
         status:'BLOCKED',
         email:"test@test.com",
         phoneContact:"233249113451",
@@ -275,8 +275,8 @@ const USERS =[
     },
     {
         id:4,
-        fullName:'Kofi Test',
-        username:'EGH00047',
+        fullName:'Andy Mark',
+        username:'test3',
         status:'ACTIVE',
         email:"test@test.com",
         phoneContact:"233249113451",
@@ -285,8 +285,8 @@ const USERS =[
     },
     {
         id:5,
-        fullName:'Obed Polley',
-        username:'EGH00047',
+        fullName:'Enoch King',
+        username:'test2',
         status:'CREATED',
         email:"test@test.com",
         phoneContact:"233249113451",
@@ -295,8 +295,8 @@ const USERS =[
     },
     {
         id:6,
-        fullName:'Yaw Polley',
-        username:'EGH00047',
+        fullName:'Yaa Araba',
+        username:'test1',
         email:"test@test.com",
         phoneContact:"233249113451",
         status:'ACTIVE',
@@ -311,14 +311,14 @@ const ITEMS =[
     {
         id:1,
         itemId:"00000000101",
-        itemName:'Huawei Mi-Fi',
+        itemName:'HTC Mi-Fi',
         stockQuantity:30,
         price:250,
     },
     {
         id:2,
         itemId:"00000000102",
-        itemName:'Huawei Wireless Router',
+        itemName:'HTC Wireless Router',
         stockQuantity:9,
         price:350,
     },
@@ -356,14 +356,14 @@ const ITEMS =[
 const ITEMS_IN =[
     {
         itemId:"00000000101",
-        itemName:'Huawei Mi-Fi',
+        itemName:'HTC Mi-Fi',
         stockQuantity:30,
         dateIssued:"24/09/2021"
     },
     {
 
         itemId:"00000000102",
-        itemName:'Huawei Wireless Router',
+        itemName:'HTC Wireless Router',
         stockQuantity:9,
         dateIssued:"24/09/2021"
     },
