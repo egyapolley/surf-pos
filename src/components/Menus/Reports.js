@@ -2,7 +2,7 @@ import React,{useState,useEffect,useMemo} from 'react';
 import classes from "./Reports.module.css";
 import DashBoardCard from "../UI/DashBoardCard";
 import CustomTable from "../UI/CustomTable";
-import {getTransactions} from "../../data";
+import {getTransactions, getUsers} from "../../data";
 import _ from 'lodash'
 import Pagination from "../UI/Pagination";
 import paginate from "../../utils/paginate";
@@ -20,6 +20,7 @@ function Reports(props) {
         ]
     },[])
 
+
     const [sortColumn, setSortColumn] = useState({
         path: "transactionDate",
         orderBy: "asc"
@@ -30,10 +31,24 @@ function Reports(props) {
     const [transactions, setTransactions] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
 
+    const [users, setUsers] = useState([])
+    const [user, setUser] = useState("")
+
+
     const totalCount = transactions.length
 
     useEffect(() => {
         setTransactions(getTransactions)
+       let users = getUsers()
+        users =users.map(user =>{
+            return {
+                username:user.username,
+                fullName:user.fullName
+            }
+        })
+        users =[{username:'allUsers',fullName:'All Users'},...users]
+        setUsers(users)
+        setUser(users[0].username)
     }, []);
 
     const sortedData = _.orderBy(transactions, [sortColumn.path], sortColumn.orderBy)
@@ -51,10 +66,8 @@ function Reports(props) {
             </header>
             <div className={classes.periodContainer}>
                 <div>
-                    <select name="" id="">
-                        <option value="test">All Users</option>
-                        <option value="test2">Kwame Yaw</option>
-                        <option value="test2">Prince</option>
+                    <select name="user" id="user" value={user} onChange={(event) =>setUser(event.target.value)}>
+                        {users.map(user => <option key={user.username} value={user.username}>{user.fullName}</option>)}
                     </select>
                 </div>
                <Period periods={periods} onClick={setCurrentPeriod} currentPeriod={currentPeriod}/>
