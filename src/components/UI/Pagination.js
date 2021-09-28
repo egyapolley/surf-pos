@@ -8,7 +8,6 @@ function Pagination(props) {
     if (numOfPages<=1) return null
 
     const pages = _.range(1,numOfPages+1)
-    console.log("pages", pages)
 
 
     return (

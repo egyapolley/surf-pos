@@ -1,0 +1,18 @@
+.container{
+    margin-top: 2px;
+
+}
+
+.container span{
+    display: inline-block;
+    border: 2px solid #4f4d4d;
+    padding: 1px 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+
+}
+.container .active{
+    background: #156be3;
+    color: #fff;
+}

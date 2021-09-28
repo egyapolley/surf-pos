@@ -1,0 +1,92 @@
+.dashboard {
+    margin-top: 50px;
+}
+
+.dashboard header {
+    padding: 0 40px 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+
+.periodContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.periodContainer select {
+    display: inline-block;
+    padding: 5px 30px;
+    outline: none;
+    border: none;
+    background: #156be3;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+.cardRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 10px 0;
+}
+
+.tableContainer{
+    margin-top: 5px;
+    background: #fff;
+    padding: 20px;
+}
+
+.tableContainerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.tableContainerHeader div:first-child span {
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.tableContainerHeader div:first-child button {
+    color: #156be3;
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+
+}
+
+.tableContainerHeader input {
+    display: inline-block;
+    padding: 3px 25px;
+    width: 20%;
+    border: 2px solid #4f4d4d;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+
+}
+
+.tableContainerHeader input:focus {
+    background: #eee;
+}
+
+.paginateContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-start;
+    padding-left: 30px;
+}
