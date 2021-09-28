@@ -19,14 +19,32 @@ function DashBoard(props) {
     const [transactions, setTransactions] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
 
+    const [msisdn, setMsisdn] = useState("")
+    const [checkAll, setCheckAll] = useState(false)
+
+
+
+
+
+
+
+
     const totalCount = transactions.length
 
     useEffect(() => {
         setTransactions(getTransactions)
     }, []);
 
-    const sortedData = _.orderBy(transactions, [sortColumn.path], sortColumn.orderBy)
+
+
+
+
+
+    const data = msisdn?transactions.filter(value => value.customerId.includes(msisdn)):transactions
+    const sortedData = _.orderBy(data, [sortColumn.path], sortColumn.orderBy)
     const paginatedData=paginate(sortedData,currentPage,pageLength)
+
+
 
 
 
@@ -49,9 +67,9 @@ function DashBoard(props) {
                 <div className={classes.tableContainerHeader}>
                     <div>
                         <span>LAST 20 TRANSACTIONS</span>
-                        <button>+check all</button>
+                        <button onClick={() =>setCheckAll(current =>!current)}>{checkAll?"-":"+"}check all</button>
                     </div>
-                    <input type="text" placeholder="Search with MSISDN"/>
+                    <input type="text" placeholder="Search with MSISDN 233.." value={msisdn} onChange={event => setMsisdn(event.target.value)}/>
                 </div>
                 <CustomTable data={paginatedData} onSort={setSortColumn} sortColumn={sortColumn} />
                 <div className={classes.paginateContainer}>

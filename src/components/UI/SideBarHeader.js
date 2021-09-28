@@ -5,7 +5,7 @@ function SideBarHeader(props) {
     return (
       <div className={classes.mainContainer}>
           <div className={classes.storeContainer}>
-              <h3> OSU MALL STORE</h3>
+              <h3> PACE STORE</h3>
           </div>
           <div className={classes.container}>
               <div className={classes.userIcon}>
