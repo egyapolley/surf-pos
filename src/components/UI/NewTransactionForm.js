@@ -262,6 +262,8 @@ function NewTransactionForm(props) {
             const cost = parseFloat(amount).toFixed(2)
             setTotalCost(cost)
 
+        }else {
+            setTotalCost(parseFloat("0").toFixed(2))
         }
 
     }
@@ -389,9 +391,11 @@ function NewTransactionForm(props) {
                             {errors['momoNumber'] && <span className={classes.error}>{errors['momoNumber']}</span>}
                         </div>}
 
-                        <div className={classes.totalCost}>
-                            <label htmlFor="totalCost">Total Cost (GHC):</label>
-                            <output id="totalCost">{totalCost}</output>
+                        <div>
+                            <div className={classes.totalCost}>
+                                <label htmlFor="totalCost">Total Cost (GHC):</label>
+                                <output id="totalCost">{totalCost}</output>
+                            </div>
                         </div>
 
 
