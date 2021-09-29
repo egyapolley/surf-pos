@@ -48,7 +48,9 @@
     transition: 0.4s;
 }
 .footer a {
-    color: #EE7070
+    color: #EE7070;
+    font-family: inherit;
+    font-size: 0.8rem;
 }
 
 .footer button:last-child{
