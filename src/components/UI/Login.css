@@ -8,7 +8,7 @@
 }
 
 .login-body-container .header {
-    font-family: 'PT Serif', serif;
+    font-family: inherit;
     padding: 70px 50px 50px;
     text-align: center;
     color: #156be3;
