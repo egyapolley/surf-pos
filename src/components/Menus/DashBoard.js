@@ -29,7 +29,6 @@ function DashBoard(props) {
 
 
 
-    const totalCount = transactions.length
 
     useEffect(() => {
         setTransactions(getTransactions)
@@ -41,6 +40,7 @@ function DashBoard(props) {
 
 
     const data = msisdn?transactions.filter(value => value.customerId.includes(msisdn)):transactions
+    const totalCount = data.length
     const sortedData = _.orderBy(data, [sortColumn.path], sortColumn.orderBy)
     const paginatedData=paginate(sortedData,currentPage,pageLength)
 

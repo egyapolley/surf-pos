@@ -25,13 +25,14 @@ function Transactions(props) {
 
     const [checkAll, setCheckAll] = useState(false)
 
-    const totalCount = transactions.length
+
 
     useEffect(() => {
         setTransactions(getTransactions)
     }, []);
 
     const data = msisdn?transactions.filter(value => value.customerId.includes(msisdn)):transactions
+    const totalCount = data.length
     const sortedData = _.orderBy(data, [sortColumn.path], sortColumn.orderBy)
     const paginatedData=paginate(sortedData,currentPage,pageLength)
 
