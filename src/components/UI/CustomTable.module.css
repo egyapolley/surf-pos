@@ -40,3 +40,7 @@
 .content thead i {
     color: green;
 }
+
+tbody button:hover {
+    text-decoration: underline;
+}
